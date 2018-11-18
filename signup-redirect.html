@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>DBS HNI's SignUp</title>
+	<title>SignUp Successful</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -28,83 +28,60 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+    
+    <style type="text/css">
+
+
+.Absolute-Center {
+    text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+    align-content: center;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 60%; 
+  height: 50%;
+  padding: 10px;
+}
+        .icon-center{
+        
+            height: 50px;
+            width: 100px;
+            background-image: url(images/logo.png);
+        
+        }
+        
+	</style>
+    
 </head>
-<body style="background-color: #999999;">
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('images/logo.png');  background-position: center;
-    background-size: contain;"></div>
-
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" name="signup" action="signup-redirect.html">
-					<span class="login100-form-title p-b-59">
-						Sign Up
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate="Name is required">
-						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="tel" name="mobile no" placeholder="Mobile No...">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
-						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="password" name="repeat-pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="flex-m w-full p-b-33">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								<span class="txt1">
-									I agree to the
-									<a href="#" class="txt2 hov1">
-										Terms of User
-									</a>
-								</span>
-							</label>
-						</div>
-
-						
-					</div>
-
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" type="submit">
-								Sign Up
-							</button>
-						</div>
-
-						<a href="login.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							Login
-							<i class="fa fa-long-arrow-right m-l-5"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+    
+<body style="background-image: url(images/Private-Wealth-Manager.jpg); background-size: cover">
+    
+    <div class="container">
+  <div class="row">
+    <div class="Absolute-Center is-Responsive" style="background-color: #999999; opacity: 0.8">
+        <div class="icon-center">
+            
+        </div>
+            
+          <h1> Successfully Signed Up!!!!</h1>
+          <br>
+          <h5>Plese Click Continue to move into Dashboard</h5>
+          <br>
+          <br>
+        <form id="loginForm" name="signup-redirect" action="/appointment.html" method="post">
+        
+          <div class="form-group">
+            <button type="submit" class="btn btn-def btn-block" style="background-color: dodgerblue  " name="goToDashboard" >Go to Dashboard</button>
+              <button type="submit" class="btn btn-def btn-block" style="background-color: firebrick  " name="goToAppointment" >Book your Slot</button>
+          </div>
+            <br>
+        </form>          
+    </div>    
+  </div>
+</div>
 	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

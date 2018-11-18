@@ -28,7 +28,7 @@ public class AppointmentsController {
 		return appointmentsBeanRepository.getAppointmentBYuser(customerBean.getMailID());
 	}
 
-	@PostMapping
+	@PostMapping("appointment")
 	public void setAppointment(@RequestBody AppointmentBean appointmentBean) {
 		appointmentsBeanRepository.save(appointmentBean);
 	}

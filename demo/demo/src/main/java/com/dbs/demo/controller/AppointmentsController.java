@@ -1,5 +1,8 @@
 package com.dbs.demo.controller;
 
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +22,12 @@ public class AppointmentsController {
 	public AppointmentsBeanRepository appointmentsBeanRepository;
 
 	@GetMapping("/appReqToUser")
-	public AppointmentBean getIncomingAppointmentsToUser(@RequestBody CustomerBean customerBean) {
+	public List<AppointmentBean> getIncomingAppointmentsToUser(@RequestBody CustomerBean customerBean) {
 		return appointmentsBeanRepository.getAppointmentForUser(customerBean.getMailID());
 	}
 
 	@GetMapping("/getReqFromUser")
-	public AppointmentBean getOutgoingAppointmentsFromUserToAdmin(@RequestBody CustomerBean customerBean) {
+	public List<AppointmentBean> getOutgoingAppointmentsFromUserToAdmin(@RequestBody CustomerBean customerBean) {
 		return appointmentsBeanRepository.getAppointmentBYuser(customerBean.getMailID());
 	}
 
@@ -34,12 +37,12 @@ public class AppointmentsController {
 	}
 
 	@GetMapping("/getReqToAdmin")
-	public AppointmentBean getIncomingAppointmentsToAdmin() {
+	public List<AppointmentBean> getIncomingAppointmentsToAdmin() {
 		return appointmentsBeanRepository.getAppointmentForWM();
 	}
 
 	@GetMapping("/getReqFromAdmin")
-	public AppointmentBean getIncomingAppointmentsFromAdmin() {
+	public List<AppointmentBean> getIncomingAppointmentsFromAdmin() {
 		return appointmentsBeanRepository.getAppointmentsToAdmin();
 	}
 }

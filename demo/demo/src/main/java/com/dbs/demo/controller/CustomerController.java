@@ -13,7 +13,7 @@ import com.dbs.demo.bean.CustomerBean;
 import com.dbs.demo.bean.LoginBean;
 import com.dbs.demo.repository.CustomerBeanRepository;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "", maxAge = 3600)
 @RestController
 public class CustomerController {
 
@@ -25,10 +25,11 @@ public class CustomerController {
 		return customerBeanRepository.findAll();
 	}
 
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public CustomerBean getLoginStatus(@RequestBody LoginBean loginBean) {
 		String username = loginBean.getMailId();
 		String password = loginBean.getPassword();
+		
 		CustomerBean customerBean = new CustomerBean();
 		customerBean = customerBeanRepository.validateUser(username, password);
 		return customerBean;

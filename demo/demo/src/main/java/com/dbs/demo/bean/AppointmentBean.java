@@ -1,6 +1,8 @@
 package com.dbs.demo.bean;
 
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

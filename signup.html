@@ -28,6 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+   
 </head>
 <body style="background-color: #999999;">
 
@@ -47,37 +48,39 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+						<input class="input100" type="text" name="name" placeholder="Name..." required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
+						<input class="input100" type="text" name="email" placeholder="Email addess..." required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="tel" name="mobile no" placeholder="Mobile No...">
+						<span class="label-input100">Mobile No</span>
+						<input class="input100" type="tel" name="mobile no" pattern="[7-9]{1}[0-9]{9}"  placeholder="Mobile No..." required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="*************">
+						<input class="input100" type="password" name="pass" placeholder="*************" required>
 						<span class="focus-input100"></span>
 					</div>
 
+<!--
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="password" name="repeat-pass" placeholder="*************">
+						<input class="input100" type="password" name="repeat-pass" placeholder="*************" required>
 						<span class="focus-input100"></span>
 					</div>
+-->
 
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" required checked>
 							<label class="label-checkbox100" for="ckb1">
 								<span class="txt1">
 									I agree to the
@@ -97,6 +100,8 @@
 							<button class="login100-form-btn" type="submit">
 								Sign Up
 							</button>
+                           
+
 						</div>
 
 						<a href="login.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
@@ -108,8 +113,9 @@
 			</div>
 		</div>
 	</div>
-	
-<!--===============================================================================================-->
+    
+	 <!--===============================================================================================-->
+     <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>

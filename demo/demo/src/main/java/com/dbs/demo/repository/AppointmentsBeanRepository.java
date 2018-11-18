@@ -13,13 +13,13 @@ public interface AppointmentsBeanRepository extends JpaRepository<AppointmentBea
 	public AppointmentBean getAppointmentBYuser(@Param("mailID") String paramString1);
 
 	// get requests for admin from users
-	@Query("select p from AppointmentBean p where p.from !=admin")
+	@Query("select p from AppointmentBean p where p.appFrom !=admin")
 	public AppointmentBean getAppointmentForWM();
 
 	// get incoming requests to user by user
-	@Query("select p from AppointmentBean p where p.to = mailID")
+	@Query("select p from AppointmentBean p where p.appTo = mailID")
 	public AppointmentBean getAppointmentForUser(@Param("mailID") String paramString1);
 
-	@Query("select p from AppointmentBean p where p.from = admin")
+	@Query("select p from AppointmentBean p where p.appFrom = admin")
 	public AppointmentBean getAppointmentsToAdmin();
 }

@@ -26,16 +26,12 @@ public class CustomerController {
 	}
 
 	@GetMapping("/login")
-	public String getLoginStatus(@RequestBody LoginBean loginBean) {
-		String response = "F";
+	public CustomerBean getLoginStatus(@RequestBody LoginBean loginBean) {
 		String username = loginBean.getMailId();
 		String password = loginBean.getPassword();
 		CustomerBean customerBean = new CustomerBean();
 		customerBean = customerBeanRepository.validateUser(username, password);
-		if (customerBean != null) {
-			response = "T";
-		}
-		return response;
+		return customerBean;
 	}
 
 	@PostMapping("signupCustomer")

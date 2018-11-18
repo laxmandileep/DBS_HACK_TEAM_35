@@ -2,55 +2,58 @@ package com.dbs.demo.bean;
 
 
 
-import java.sql.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 @Entity
 @Table(name = "dbs_tbl_appointments")
 public class AppointmentBean {
 
-	
-//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int appID;
-	String from;
-	String to;
+	String appFrom;
+	String appTo;
 	String description;
 	String branch;
 	String owner;
-
-	public AppointmentBean(String from, String to, String description, String branch, String owner, Date date) {
+	String date;
+	public AppointmentBean(String appFrom, String appTo, String description, String branch, String owner, String date) {
 		super();
-		this.from = from;
-		this.to = to;
+		//this.appID = appID;
+		this.appFrom = appFrom;
+		this.appTo = appTo;
 		this.description = description;
 		this.branch = branch;
 		this.owner = owner;
 		this.date = date;
 	}
 
-	public String getFrom() {
-		return from;
+	/*public int getAppID() {
+		return appID;
 	}
 
-	public void setFrom(String from) {
-		this.from = from;
+	public void setAppID(int appID) {
+		this.appID = appID;
+	}*/
+
+	public String getAppFrom() {
+		return appFrom;
 	}
 
-	public String getTo() {
-		return to;
+	public void setAppFrom(String appFrom) {
+		this.appFrom = appFrom;
 	}
 
-	public void setTo(String to) {
-		this.to = to;
+	public String getAppTo() {
+		return appTo;
+	}
+
+	public void setAppTo(String appTo) {
+		this.appTo = appTo;
 	}
 
 	public String getDescription() {
@@ -77,16 +80,15 @@ public class AppointmentBean {
 		this.owner = owner;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	Date date;
+	
 
 	public AppointmentBean() {
 		// TODO Auto-generated constructor stub
